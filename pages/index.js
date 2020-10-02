@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 import utilStyles from '../styles/utils.module.css';
-import Layout, { siteTitle } from '../components/layout';
+import Layout, { siteTitle } from '../components/Layout';
 
 import { getSortedPostsData } from '../lib/posts';
 
@@ -32,7 +32,7 @@ export default function Home({ allPostsData }) {
         <ul className={utilStyles.list}>
           {allPostsData.map((post) => {
             return (
-              <li className={utilStyles.listItem}>
+              <li className={utilStyles.listItem} key={post.id}>
                 {post.title}
                 <br />
                 {post.id}
